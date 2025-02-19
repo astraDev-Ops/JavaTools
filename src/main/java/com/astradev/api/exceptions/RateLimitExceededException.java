@@ -1,4 +1,4 @@
-package xyz.astradev.api.exceptions;
+package com.astradev.api.exceptions;
 
 public class RateLimitExceededException extends Throwable {
   public RateLimitExceededException(String message) {

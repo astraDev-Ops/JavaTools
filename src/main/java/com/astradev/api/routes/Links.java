@@ -1,13 +1,12 @@
-package xyz.astradev.api.routes;
+package com.astradev.api.routes;
 
+import com.astradev.api.API;
+import com.astradev.api.exceptions.RateLimitExceededException;
+import com.astradev.api.exceptions.ValidationFailureException;
+import com.astradev.objects.LinkOutput;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
-import xyz.astradev.api.API;
-import xyz.astradev.api.exceptions.RateLimitExceededException;
-import xyz.astradev.api.exceptions.ValidationFailureException;
-import xyz.astradev.objects.FileScanOutput;
-import xyz.astradev.objects.LinkOutput;
 
 import java.io.IOException;
 import java.util.regex.Matcher;

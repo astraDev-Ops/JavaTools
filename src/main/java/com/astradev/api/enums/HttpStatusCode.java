@@ -1,4 +1,4 @@
-package xyz.astradev.api.enums;
+package com.astradev.api.enums;
 
 public enum HttpStatusCode {
     // 100

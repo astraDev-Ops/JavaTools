@@ -1,9 +1,9 @@
-package xyz.astradev.api;
+package com.astradev.api;
 
+import com.astradev.Validation;
 import com.google.gson.Gson;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
-import xyz.astradev.Validation;
 
 public interface API<T> {
     String baseURL = "https://api.astradev.xyz/v5/";

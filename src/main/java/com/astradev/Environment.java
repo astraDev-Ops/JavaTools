@@ -1,4 +1,4 @@
-package xyz.astradev;
+package com.astradev;
 
 import java.io.IOException;
 import java.nio.file.Files;

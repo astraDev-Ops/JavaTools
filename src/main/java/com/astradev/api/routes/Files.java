@@ -1,14 +1,14 @@
-package xyz.astradev.api.routes;
+package com.astradev.api.routes;
 
+import com.astradev.api.API;
+import com.astradev.api.exceptions.RateLimitExceededException;
+import com.astradev.api.exceptions.ValidationFailureException;
+import com.astradev.objects.FileScanOutput;
+import com.astradev.objects.HashList;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
-import xyz.astradev.api.API;
-import xyz.astradev.api.exceptions.RateLimitExceededException;
-import xyz.astradev.api.exceptions.ValidationFailureException;
-import xyz.astradev.objects.FileScanOutput;
-import xyz.astradev.objects.HashList;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -26,7 +26,7 @@ public class Files implements API<FileScanOutput> {
         String json = gson.toJson(data);
         RequestBody postData = RequestBody.create(json, jsonType);
         Request request = new Request.Builder()
-                .url(baseURL + "files")
+                .url(baseURL + "file")
                 .post(postData)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")

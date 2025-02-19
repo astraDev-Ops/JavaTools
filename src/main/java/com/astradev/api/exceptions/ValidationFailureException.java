@@ -1,4 +1,4 @@
-package xyz.astradev.api.exceptions;
+package com.astradev.api.exceptions;
 
 public class ValidationFailureException extends Throwable {
     public ValidationFailureException(String message) {
