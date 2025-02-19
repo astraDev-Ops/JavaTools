@@ -29,12 +29,14 @@ publishing {
         create<MavenPublication>("shadow") {
             groupId = "com.astradev"
             artifactId = "tools"
-            version = "0.0.1"
+            version = "1"
+
             from(components["shadow"])
             //from(components["java"])
         }
     }
 }
+
 
 tasks.spotbugsMain {
     reports.create("html") {
