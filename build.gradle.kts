@@ -3,6 +3,8 @@ plugins {
     id("com.github.spotbugs") version "6.1.3"
     `maven-publish`
     `java-library`
+    id ("com.gradleup.shadow") version "8.3.6"
+
 }
 
 group = "xyz.astradev"
@@ -24,11 +26,12 @@ publishing {
         }
     }
     publications {
-        create<MavenPublication>("maven") {
+        create<MavenPublication>("shadow") {
             groupId = "com.astradev"
             artifactId = "tools"
-            version = "0.0.1"
-            from(components["java"])
+            version = "0.0.3"
+            from(components["shadow"])
+            //from(components["java"])
         }
     }
 }
@@ -44,4 +47,5 @@ tasks.spotbugsMain {
 dependencies {
     api ("com.squareup.okhttp3:okhttp:4.12.0")
     api ("com.google.code.gson:gson:2.11.0")
+    api ("com.google.guava:guava:33.3.1-jre") //hashing
 }
