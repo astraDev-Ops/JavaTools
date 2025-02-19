@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("com.github.spotbugs") version "6.1.3"
+    id ("maven")
 }
 
 group = "xyz.astradev"
