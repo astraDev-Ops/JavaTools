@@ -29,7 +29,7 @@ publishing {
         create<MavenPublication>("shadow") {
             groupId = "com.astradev"
             artifactId = "tools"
-            version = "0.0.3"
+            version = "0.0.1"
             from(components["shadow"])
             //from(components["java"])
         }
